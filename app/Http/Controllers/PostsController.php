@@ -7,7 +7,6 @@ use App\Mail\Testmarkdown;
 use Illuminate\Support\Facades\DB;
 
 
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 

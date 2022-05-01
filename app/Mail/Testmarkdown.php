@@ -36,3 +36,4 @@ class Testmarkdown extends Mailable
         // or instead of from go to .env -> MAIL_FROM_ADDRESS
     }
 }
+
