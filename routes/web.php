@@ -34,12 +34,12 @@ Route::get('/posts', [
     PostsController::class, 'index',
 ]);
 
-// Route::get('/mail', [
-//     PostsController::class, 'mail',
-// ]);
-
 Route::get('/mail', [
-    MailController::class, 'mail']);
+    PostsController::class, 'mail',
+]);
+
+// Route::get('/mail', [
+//     MailController::class, 'mail']);
 
 
 

@@ -7,11 +7,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class TryMail extends Mailable
+class Testmarkdown extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data = [];
+    public $url = 'http://www.facebook.com';
     /**
      * Create a new message instance.
      *
@@ -19,7 +19,7 @@ class TryMail extends Mailable
      */
     public function __construct()
     {
-        $this->data = 'plop';
+
     }
 
     /**
@@ -30,7 +30,9 @@ class TryMail extends Mailable
     public function build()
     {
         return $this->from('test@test.com')
-        ->subject("subjectTitle")
-        ->view('emails.test');
+        ->markdown('emails.markdown-test');
+
+
+        // or instead of from go to .env -> MAIL_FROM_ADDRESS
     }
 }

@@ -15,13 +15,11 @@
     {{-- <h1>Hello {{  $data['name']  }}</h1> --}}
     {{-- <p>{{ $plop }}</p> --}}
 
-    <p>Hi {{$plop['name']}}</p>
-    <p>Hi {{$plop['email']}}</p>
+    <p>Hi {{$test['name']}}</p>
+    <p>Hi {{$test['email']}}</p>
 
         
 
 </body>
 </html>
-
-
 

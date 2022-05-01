@@ -11,16 +11,17 @@ class TestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $plop = [];
+    public $test = [];
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Array $user)
+    public function __construct($user)
     {
-        $this->plop = $user;
+        $this->test = $user;
         
+
     }
 
     /**
@@ -32,8 +33,9 @@ class TestMail extends Mailable
     {
         return $this->from('test@test.com')
                     ->subject("subjectTitle")
-                    ->view('emails.test');
+                    ->view('emails.test')
                     // ->with(['plop' => $this->plop]);
+                    ->attachFromStorage('img/icon-box.jpg', 'salaries.pdf');
     }
 }
 
